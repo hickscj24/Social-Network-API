@@ -7,7 +7,7 @@ const thoughtController  = {
     getAllThoughts(req, res) {
         Thought.find({})
         .populate({
-            path: 'user',
+            path: 'username',
             select: '-__v'
         })
         .select('-__v')

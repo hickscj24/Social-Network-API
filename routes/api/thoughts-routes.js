@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const Thoughtscontroller = require('../../controllers/thought-controller')
+const thoughtController = require('../../controllers/thought-controller')
 const { Thought } = require('../../models');
 
 
@@ -8,8 +8,8 @@ const { Thought } = require('../../models');
 router.get('/', (req, res) => {
   // find all categories
   // be sure to include its associated Products
-  Thoughtscontroller.getAllThoughts(req, res)
-
+   thoughtController.getAllThoughts(req, res)
+  
 });
 
 router.get('/:id', (req, res) => {
@@ -17,23 +17,23 @@ router.get('/:id', (req, res) => {
   // be sure to include its associated Products
   
   
-  Thoughtscontroller.getThoughtById(req, res)
+  thoughtController.getThoughtById(req, res)
 
 });
 
 router.post('/', (req, res) => {
-  Thoughtscontroller.createThought(req, res)
+  thoughtController.createThought(req, res)
    
   // create a new category
 
 });
 
 router.put('/:id', (req, res) => {
-Thoughtscontroller.updateThought(req, res)
+thoughtController.updateThought(req, res)
 });
 
 router.delete('/:id', (req, res) => {
- Thoughtscontroller.deleteThought(req, res)
+ thoughtController.deleteThought(req, res)
   
 });
 

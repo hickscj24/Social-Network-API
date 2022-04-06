@@ -29,6 +29,7 @@ const thoughtSchema = new Schema ({
     },
     id: false
 }
+
 );
 
 
